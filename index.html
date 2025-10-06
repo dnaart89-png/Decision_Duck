@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Decision Duck</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="duck">🦆</div>
+  <h1>Decision Duck</h1>
+  <p>Having trouble deciding? Let the duck help!</p>
+
+  <input type="text" id="decisionTopic" placeholder="What's your decision about?" size="40" />
+
+  <div class="list-container">
+    <div class="list">
+      <h2>Pros</h2>
+      <input type="text" id="proText" placeholder="Pro reason" />
+      <input type="number" id="proScore" min="1" max="10" placeholder="1-10" />
+      <button onclick="addItem('pro')">Add Pro</button>
+      <ul id="proList"></ul>
+    </div>
+
+    <div class="list">
+      <h2>Cons</h2>
+      <input type="text" id="conText" placeholder="Con reason" />
+      <input type="number" id="conScore" min="1" max="10" placeholder="1-10" />
+      <button onclick="addItem('con')">Add Con</button>
+      <ul id="conList"></ul>
+    </div>
+  </div>
+
+  <button onclick="getDecision()">🧠 Ask the Duck!</button>
+
+  <div class="result" id="resultMessage"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
